@@ -1,0 +1,18 @@
+.dates {
+  display: flex;
+  align-content: space-between;
+  flex-direction: row;
+}
+.from {
+  position: relative;
+  bottom: 26px;
+  padding-left: 5px;
+}
+.btn {
+  position: relative;
+  padding-top: 30px;
+}
+.url {
+  position: relative;
+  bottom: 10px;
+}

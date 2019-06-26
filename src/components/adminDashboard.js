@@ -5,30 +5,46 @@ import Dropdown from "./Dropdown";
 import Inputurl from "./Url";
 import Submit from "./Submitbtn";
 import Date from "./Date";
+// import Faker from "./faker";
+import Search from "./Search";
+import "./adminDashboard.css";
 
 const adminDashboard = () => {
   return (
-    <Grid celled="internally">
-      <Grid.Row>
-        <Grid.Column width={3}>
-          <h4>Phone Number</h4>
-          <Upload />
-          <h4>Product</h4>
-          <Dropdown />
-          <h4>URL</h4>
-          <Inputurl />
-          <Submit />
-        </Grid.Column>
-        <Grid.Column width={10}>
-          <h4>
-            To: <Date />
-            {/* From: <Date /> */}
-          </h4>
-          <h4>Product</h4>
-          <Dropdown />
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
+    <div className="ui grey fluid card">
+      <div className="card content">
+        <Grid celled="internally">
+          <Grid.Row>
+            <Grid.Column width={5}>
+              <h4 className="number">Phone Number</h4>
+              <Upload />
+              <h4 className="product">Product</h4>
+              <Dropdown />
+              <h4 className="url">URL</h4>
+              <Inputurl />
+              <div className="btn">
+                <Submit />
+              </div>
+            </Grid.Column>
+            <Grid.Column width={8} style={{ padding: "30px" }}>
+              <div className="dates">
+                <h4 className="to">
+                  To: <Date />
+                </h4>
+
+                <h4 className="from">
+                  From: <Date />
+                </h4>
+              </div>
+              <h4>Product</h4>
+              <Dropdown />
+              <h4>Search</h4>
+              <Search />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </div>
+    </div>
   );
 };
 
