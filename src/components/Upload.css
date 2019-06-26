@@ -1,6 +1,8 @@
 .filepond--root {
-  height: 60px;
-  width: 200px;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  padding: 2px;
 }
 
 /* use a hand cursor intead of arrow for the action buttons */
@@ -11,6 +13,9 @@
 /* the text color of the drop label*/
 .filepond--drop-label {
   color: #555;
+  /* position: relative;
+  text-align: center;
+  bottom: 20px; */
 }
 
 /* underline color for "Browse" button */
@@ -25,7 +30,7 @@
 
 /* the border radius of the drop area */
 .filepond--panel-root {
-  border-radius: 0.5em;
+  border-radius: 3px;
 }
 
 /* the border radius of the file item */
@@ -45,7 +50,7 @@
 
 /* the background color of the black action buttons */
 .filepond--file-action-button {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: lightgrey;
 }
 
 /* the icon color of the black action buttons */
@@ -65,17 +70,17 @@
 }
 
 /* error state color */
-[data-filepond-item-state*='error'] .filepond--item-panel,
-[data-filepond-item-state*='invalid'] .filepond--item-panel {
+[data-filepond-item-state*="error"] .filepond--item-panel,
+[data-filepond-item-state*="invalid"] .filepond--item-panel {
   background-color: red;
 }
 
-[data-filepond-item-state='processing-complete'] .filepond--item-panel {
+[data-filepond-item-state="processing-complete"] .filepond--item-panel {
   background-color: green;
 }
 
 /* bordered drop area */
 .filepond--panel-root {
   background-color: transparent;
-  border: 2px solid #2c3340;
+  border: 1px solid lightgray;
 }

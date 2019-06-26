@@ -2,6 +2,7 @@ import _ from "lodash";
 import faker from "faker";
 import React, { Component } from "react";
 import { Search, Grid, Header, Segment } from "semantic-ui-react";
+import "./Search.css";
 
 const initialState = { isLoading: false, results: [], value: "" };
 
@@ -25,7 +26,7 @@ const source = _.range(0, 3).reduce(memo => {
   return memo;
 }, {});
 
-export default class SearchExampleCategory extends Component {
+export default class SearchCategory extends Component {
   state = initialState;
 
   handleResultSelect = (e, { result }) =>
@@ -63,12 +64,14 @@ export default class SearchExampleCategory extends Component {
 
     return (
       <Grid>
-        <Grid.Column width={8}>
+        <Grid.Column width={12}>
           <Search
+            // className="searchBox"
+            // width="100%"
             category
             loading={isLoading}
             onResultSelect={this.handleResultSelect}
-            onSearchChange={_.debounce(this.handleSearchChange, 500, {
+            onSearchChange={_.debounce(this.handleSearchChange, 5, {
               leading: true
             })}
             results={results}
