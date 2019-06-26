@@ -5,6 +5,8 @@ import Dropdown from "./Dropdown";
 import Inputurl from "./Url";
 import Submit from "./Submitbtn";
 import Date from "./Date";
+// import Faker from "./faker";
+import Search from "./faker";
 
 const adminDashboard = () => {
   return (
@@ -22,10 +24,12 @@ const adminDashboard = () => {
         <Grid.Column width={10}>
           <h4>
             To: <Date />
-            {/* From: <Date /> */}
+            From: <Date />
           </h4>
           <h4>Product</h4>
           <Dropdown />
+          <h4>Search</h4>
+          <Search />
         </Grid.Column>
       </Grid.Row>
     </Grid>
