@@ -22,7 +22,7 @@ const adminDashboard = () => {
         <Grid.Column width={10}>
           <h4>
             To: <Date />
-            From: <Date />
+            {/* From: <Date /> */}
           </h4>
           <h4>Product</h4>
           <Dropdown />
